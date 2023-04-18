@@ -197,6 +197,7 @@ Naive Bayes
 ## Results
 
 1. Model #1: Simple logistic regression model using TFIDF vectorization.
+
 Training Accuracy: 0.92921875
 Test Accuracy: 0.9108
 
