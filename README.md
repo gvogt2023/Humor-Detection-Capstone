@@ -23,7 +23,13 @@ Business Objectives:
 - Example: "Kim kardashian baby name: reality star discusses the 'k' name possibility" is 'false' for 'humor'
 
 
-![Correlation Matrix](imgs/correlation_matrix.png)
+![Joke Length Distribution by Type](imgs/jokelength_distribution_type.png)
+![Joke Length Distribution](imgs/jokes_length_distribution.png)
+![Target Distribution](imgs/target_distribution.png)
+![Wordcloud Jokes](imgs/wordcloud_jokes.png)
+![Wordcloud Non-Jokes](imgs/wouldcloud_nonjokes.png)
+
+
 High negative correlations:
 - Income
 - Education
