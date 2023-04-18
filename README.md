@@ -181,69 +181,35 @@ I created a similar plot with binary labels in the y array, which indicate wheth
 
 ## Classification Modeling
 
-- Simple logistic regression model using TFIDF vectorization
-- Logistic regression with lemmatization to test if lemmatization will help accuracy
-- Support Vector Machines (SVM) model
-Random Forest with gridsearch
-K Nearest Neighbors with gridsearch
-XGBoost classification model
-Basic neural network
-Neural network with regularization
-Neural network with dropout
-Convolutional Neural Network (CNN)
-Recurrent Neural Network (RNN)
-Naive Bayes
+1. Simple logistic regression model using TFIDF vectorization
+2. Logistic regression with lemmatization to test if lemmatization will help accuracy
+3. Support Vector Machines (SVM) model
+4. Random Forest with gridsearch
+5. K Nearest Neighbors with gridsearch
+6. XGBoost classification model
+7. Basic neural network
+8. Neural network with regularization
+9. Neural network with dropout
+10. Convolutional Neural Network (CNN)
+11. Recurrent Neural Network (RNN)
+12. Naive Bayes
 
 ## Results
 
-1. Model #1: Simple logistic regression model using TFIDF vectorization.
-
-Training Accuracy: 0.92921875
-Test Accuracy: 0.9108
-
-2. Model #2: Logistic regression with lemmatization to test if lemmatization will help accuracy.
-Training Accuracy: 0.92335625
-Test Accuracy: 0.905625
-
-3. Model #3: Support Vector Machines (SVM) model.
-Train Accuracy: 0.94555
-Test Accuracy: 0.9144
-
-4. Model #4: RandomForest with gridsearch
-Training Accuracy: 0.897475
-Test Accuracy: 0.85495
-
-5. Model #5: K nearest neighbors with gridsearch
-Training Accuracy: 1.0
-Test Accuracy: 0.824
-
-6. Model #6: XGBoost classification model
-Training Accuracy: 0.789875
-Test Accuracy: 0.7675
-
-7. Model #7: Basic neural network 
-Train Accuracy: 0.9999374747276306
-Test Accuracy: 0.8657500147819519
-
-8. Model #8: Neural network with regularization
-Train Accuracy: 0.8952500224113464
-Test Accuracy: 0.843999981880188
-
-9. Model #9: Neural network with dropout
-Train Accuracy: 0.999875009059906
-Test Accuracy: 0.862500011920929
-
-10. Model #10: CNN 
-Train Accuracy: 0.9991250038146973
-Test Accuracy: 0.8542500138282776
-
-11. Model #11: RNN
-Train Accuracy: 0.9983749985694885
-Test Accuracy: 0.8497499823570251
-
-12. Model #12: Naive Bayes
-Train Accuracy: 0.947
-Test Accuracy: 0.8835
+| Model | Training Accuracy | Test Accuracy |
+|-------|------------------|---------------|
+| Model 1 | 0.92921875 | 0.9108 |
+| Model 2 | 0.92335625 | 0.905625 |
+| Model 3 | 0.94555 | 0.9144 |
+| Model 4 | 0.897475 | 0.85495 |
+| Model 5 | 1.0 | 0.824 |
+| Model 6 | 0.789875 | 0.7675 |
+| Model 7 | 0.9999374747276306 | 0.8657500147819519 |
+| Model 8 | 0.8952500224113464 | 0.843999981880188 |
+| Model 9 | 0.999875009059906 | 0.862500011920929 |
+| Model 10 | 0.9991250038146973 | 0.8542500138282776 |
+| Model 11 | 0.9983749985694885 | 0.8497499823570251 |
+| Model 12 | 0.947 | 0.8835 |
 
 
 ## Evaluation
