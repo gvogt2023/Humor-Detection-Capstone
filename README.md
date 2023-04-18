@@ -26,9 +26,17 @@ Business Objectives:
 
 ## Exploratory Data Analysis
 
-![Joke Length Distribution by Type](imgs/jokelength_distribution_type.png)
-![Joke Length Distribution](imgs/jokes_length_distribution.png)
+The dataset is balanced in regards to its target variable 'humor.'
+
 ![Target Distribution](imgs/target_distribution.png)
+
+The length of the values in 'text' column follow a normal distribution and range from 
+
+![Joke Length Distribution](imgs/jokes_length_distribution.png)
+
+![Joke Length Distribution by Type](imgs/jokelength_distribution_type.png)
+
+
 ![Wordcloud Jokes](imgs/wordcloud_jokes.png)
 ![Wordcloud Non-Jokes](imgs/wouldcloud_nonjokes.png)
 
