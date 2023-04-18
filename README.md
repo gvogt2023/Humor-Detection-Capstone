@@ -132,6 +132,8 @@ I created a similar plot with binary labels in the y array, which indicate wheth
 
 ## Classification Modeling
 
+For this binary classification problem of selecting whether humor = 'true' or 'false' based on the clean text data, I analyzed 12 different models.
+
 1. Simple logistic regression model using TFIDF vectorization
 2. Logistic regression with lemmatization to test if lemmatization will help accuracy
 3. Support Vector Machines (SVM) model
@@ -178,10 +180,6 @@ SVM model was the best performing model with a test accuracy of 0.9144. Overall,
 
 ## Conclusion and Recommendations
 
-Takeaways:
-- Predicting diabetes with phone screening is not very reliable
-- Binary model performs better than multi-class and still applies to our business case
-- Model can still be useful for a generalization of risk
-- Further improve model by tuning hyper-parameters, try more models, polynomial feature engineering etc.
-- Look in the future to add additional biometric data to strengthen predictions
-- Prioritize feedback on BMI, age and general health on future surveys as these have the strongest
+Based on the results of the classification modeling, we can conclude that the SVM model performed the best with a test accuracy of 0.9144, closely followed by the simple logistic regression model using TFIDF vectorization with a test accuracy of 0.9108. It is worth noting that some models performed significantly worse, such as the XGBoost classification model and the K Nearest Neighbors model, which suggests that these models may not be suitable for this particular problem.
+
+In terms of recommendations, we suggest using the SVM model or the simple logistic regression model with TFIDF vectorization for this task, as they both demonstrated high accuracy in predicting the classification of jokes. Additionally, it may be worth exploring other natural language processing techniques, such as stemming or part-of-speech tagging, to see if they can further improve the accuracy of the models. Finally, it may be beneficial to collect more data and expand the dataset to improve the models' generalizability.
