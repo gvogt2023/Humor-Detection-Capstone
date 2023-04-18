@@ -43,6 +43,44 @@ A word cloud was generated to visualize the most common words in a dataset of jo
 ![Wordcloud Jokes](imgs/wordcloud_jokes.png)
 ![Wordcloud Non-Jokes](imgs/wouldcloud_nonjokes.png)
 
+# Universal Sentence Encoder
+
+I used a pre-trained Universal Sentence Encoder model from TensorFlow Hub. The encoded vectors are stored in a list called joke_vectors_list. To encode the jokes in batches, a for loop is used that iterates over the jokes in steps of the batches required due to the size of the dataset. The model object is called on each batch of jokes, and the resulting encoded vectors are appended to the joke_vectors_list list.
+
+Next, cosine similarity is calculated between all pairs of joke vectors using the cosine_similarity function from sklearn.metrics.pairwise. Since the joke vectors array may be too large to calculate cosine similarity between all pairs of vectors at once, the calculation is done in batches. The final similarity_matrix contains cosine similarity values for all pairs of joke vectors.
+
+A user will be prompted to enter a string to encode and assess cosine similarity to the list of jokes and return the most similar rows.
+
+Given a user's input, encode it into a vector representation using the same Universal Sentence Encoder model.
+
+```
+user_input = input("Enter a sentence: ")
+
+```
+Get the number of jokes to recommend from the user
+
+```
+num_jokes = int(input("How many jokes would you like to see? "))
+```
+
+Print the top-n jokes
+
+```
+print(f"Top {num_jokes} jokes:")
+for i, joke in enumerate(top_jokes):
+    print(f"{i+1}. {joke.text}")
+```
+
+I enter the phrase "Dr. Seuss cat in the hat" and enter "5" for number of results to show.
+
+```
+Top 5 jokes:
+1. What did dr. seuss call the book he wrote about star wars? the cat in the at-at
+2. What was schrodinger's favorite childhood book? the cat in the box by dr. seuss
+3. What is dr. seuss' favorite play? green eggs and hamlet
+4. Did you read dr seuss as a kid because green eggs and damn
+5. What do you call a magician in a dr. seuss book? who-dini
+```
 
 ## Topic modeling
 
@@ -141,45 +179,7 @@ I created a similar plot with binary labels in the y array, which indicate wheth
 
 ![t-SNE Visualization by Humor Type](imgs/tsne_visualization.png)
 
-## Universal Sentence Encoder
-
-I used a pre-trained Universal Sentence Encoder model from TensorFlow Hub. The encoded vectors are stored in a list called joke_vectors_list. To encode the jokes in batches, a for loop is used that iterates over the jokes in steps of the batches required due to the size of the dataset. The model object is called on each batch of jokes, and the resulting encoded vectors are appended to the joke_vectors_list list.
-
-Next, cosine similarity is calculated between all pairs of joke vectors using the cosine_similarity function from sklearn.metrics.pairwise. Since the joke vectors array may be too large to calculate cosine similarity between all pairs of vectors at once, the calculation is done in batches. The final similarity_matrix contains cosine similarity values for all pairs of joke vectors.
-
-A user will be prompted to enter a string to encode and assess cosine similarity to the list of jokes and return the most similar rows.
-
-Given a user's input, encode it into a vector representation using the same Universal Sentence Encoder model.
-
-```
-user_input = input("Enter a sentence: ")
-
-```
-Get the number of jokes to recommend from the user
-
-```
-num_jokes = int(input("How many jokes would you like to see? "))
-```
-
-Print the top-n jokes
-
-```
-print(f"Top {num_jokes} jokes:")
-for i, joke in enumerate(top_jokes):
-    print(f"{i+1}. {joke.text}")
-```
-
-I enter the phrase "Dr. Seuss cat in the hat" and enter "5" for number of results to show.
-
-```
-Top 5 jokes:
-1. What did dr. seuss call the book he wrote about star wars? the cat in the at-at
-2. What was schrodinger's favorite childhood book? the cat in the box by dr. seuss
-3. What is dr. seuss' favorite play? green eggs and hamlet
-4. Did you read dr seuss as a kid because green eggs and damn
-5. What do you call a magician in a dr. seuss book? who-dini
-```
-
+#
 
 ## Classification Modeling
 
