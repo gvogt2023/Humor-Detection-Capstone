@@ -139,7 +139,7 @@ Documents that are closer together on the plot are more similar in terms of thei
 
 I created a similar plot with binary labels in the y array, which indicate whether a joke is humorous or not representing their similarity based on their TF-IDF representations.
 
-IMAGE HERE
+![t-SNE Visualization by Humor Type](imgs/tsne_visualization.png)
 
 ## Universal Sentence Encoder
 
