@@ -51,14 +51,16 @@ Age is also skewed to the for diabetic patients.
 
 Due to the size of the dataset and time for processing, we are undersampling the majority class 0 and keeping all rows for the minority class. Randomly selecting the matching length of minority class from majority dataframe.
 
+## Universal Sentence Encoder
+
+```
+
+
 ## Topic Modeling
 
 Given a user's input, encode it into a vector representation using the same Universal Sentence Encoder model.
 user_input = input("Enter a sentence: ")
-'''
-# Given a user's input, encode it into a vector representation using the same Universal Sentence Encoder model.
-user_input = input("Enter a sentence: ")
-'''
+
 ## Classification Modeling
 
 During this iteration process for the multiclass problem of predicting for 0 (non-diabetic), 1 (prediabetic) or 2 (diabetic), I processed the following models:
