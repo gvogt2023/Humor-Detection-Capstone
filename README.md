@@ -166,6 +166,7 @@ Accuracy is the metric of greatest importance to our analysis and selection of a
 | Model 11 | 0.9983749985694885 | 0.8497499823570251 |
 | Model 12 | 0.947 | 0.8835 |
 
+Lemmatization was used in model 2 to test if lemmatization will help accuracy but it was determined to decrease accuracy. Part-of-speech tagging was then tested in model 3 and did ___. 
 
 ## Evaluation
 
