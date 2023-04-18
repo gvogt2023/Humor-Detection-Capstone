@@ -196,6 +196,8 @@ I created a similar plot with binary labels in the y array, which indicate wheth
 
 ## Results
 
+Accuracy is the metric of greatest importance to our analysis and selection of a final model.
+
 | Model | Training Accuracy | Test Accuracy |
 |-------|------------------|---------------|
 | Model 1 | 0.92921875 | 0.9108 |
