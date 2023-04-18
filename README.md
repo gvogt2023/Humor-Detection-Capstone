@@ -18,6 +18,9 @@ Business Objectives:
 
 ## Data understanding:
 - In a [2004 paper](https://arxiv.org/abs/2004.12765), the authors Issa Annamoradnejad, Gohar Zoghi provided on a dataset for humor detection consisting of 200,000 formal short texts. Each entry has two columns: one for the raw text of the joke and the other for target binary variable 'humor' labled true or false.
+- Example: "What is a pokemon master's favorite kind of pasta? wartortellini!!" is 'true' for 'humor'
+- The non-humorous texts are short headlines from online news sources
+- Example: "Kim kardashian baby name: reality star discusses the 'k' name possibility" is 'false' for 'humor'
 
 
 ![Correlation Matrix](imgs/correlation_matrix.png)
