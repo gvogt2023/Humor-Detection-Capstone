@@ -34,7 +34,77 @@ High negative correlations:
 
 LDA is used as a topic modeling technique to discover latent topics in a collection of documents. It models each topic as a probability distribution over the words in the vocabulary to explain the topic-word distributions that best explain the observed document-word occurrences.
 
-For topic modeling with LDA, lemmatization, tokenization and vectorization are used to prepare the text data for input into the model. 
+For topic modeling with LDA, lemmatization, tokenization and vectorization are used to prepare the text data for input into the model. TfidfVectorizer is used to tokenize the lemmatized text data, and an LDA model is created and trained on the tokenized data. I analyze the topic structure of the jokes in the dataset and print the top words for each topic using get feature names.
+
+```
+feature_names = vectorizer.get_feature_names_out()
+for i in range(num_topics):
+    print("Topic %d:" % i)
+    topic_words = np.array(feature_names)[np.argsort(lda_model.components_[i])][:-11:-1]
+    for word in topic_words:
+        print("  %s" % word)
+    print()
+```
+
+Topic 0:
+  joke
+  mexican
+  whats
+  make
+  say
+  trump
+  change
+  im
+  like
+  want
+
+Topic 1:
+  like
+  joke
+  chicken
+  whats
+  say
+  im
+  know
+  people
+  tell
+  woman
+
+Topic 2:
+  walk
+  bar
+  say
+  man
+  im
+  whats
+  people
+  like
+  guy
+  got
+
+Topic 3:
+  like
+  say
+  whats
+  woman
+  black
+  know
+  im
+  people
+  make
+  coffee
+
+Topic 4:
+  im
+  like
+  people
+  knock
+  know
+  hear
+  girl
+  time
+  whats
+  say
 
 ## Universal Sentence Encoder
 
