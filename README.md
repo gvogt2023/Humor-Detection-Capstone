@@ -182,9 +182,11 @@ SVM model was the best performing model with a test accuracy of 0.9144.
 CLASSIFICATION REPORT
 
 Confusion matrix for final SVM model:
+
 ![Confusion Matrix SVM](imgs/confusion_matrix_final_model.png)
 
 ROC curve for final SVM model:
+
 ![ROC Curve SVM](imgs/ROC_curve_final_model.png)
 
 Overall, the results demonstrate that machine learning models can be effective at classifying texts as humorous or not. Future work could involve using larger datasets or exploring more complex models, such as deep learning models, to achieve even better performance.
