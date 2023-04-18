@@ -96,64 +96,15 @@ for i in range(num_topics):
 ```
 ```
 Topic 0:
-  joke
-  mexican
-  whats
-  make
-  say
-  trump
-  change
-  im
-  like
-  want
-
+one, make, man, day, time, it, never, two, take, women
 Topic 1:
-  like
-  joke
-  chicken
-  whats
-  say
-  im
-  know
-  people
-  tell
-  woman
-
+trump, donald, trumps, clinton, hillary, says, president, gop, us, obama
 Topic 2:
-  walk
-  bar
-  say
-  man
-  im
-  whats
-  people
-  like
-  guy
-  got
-
+get, cross, road, chicken, side, it, married, christmas, cant, pregnant
 Topic 3:
-  like
-  say
-  whats
-  woman
-  black
-  know
-  im
-  people
-  make
-  coffee
-
+people, black, world, white, cant, hate, types, 10, think, racist
 Topic 4:
-  im
-  like
-  people
-  knock
-  know
-  hear
-  girl
-  time
-  whats
-  say
+new, photos, york, years, video, week, year, fashion, best, 10
 ```
 
 The function "get_top_tokens" is defined to extract the most important words for each topic, along with their corresponding weights, for the 5 defined topics. The feature names for the vectorizer used to process the input documents are obtained using the "get_feature_names_out" method. Finally, a bar plot is generated for each topic, displaying the top tokens and their weights.
