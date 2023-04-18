@@ -38,12 +38,11 @@ For topic modeling with LDA, lemmatization, tokenization and vectorization are u
 
 ```
 feature_names = vectorizer.get_feature_names_out()
+
 for i in range(num_topics):
-    print("Topic %d:" % i)
-    topic_words = np.array(feature_names)[np.argsort(lda_model.components_[i])][:-11:-1]
-    for word in topic_words:
-        print("  %s" % word)
-    print()
+    topic_words = ' '.join([feature_names[idx] for idx in np.argsort(lda_model.components_[i])[:-11:-1]])
+    print(f"Topic {i}:\n{topic_words}\n")
+
 ```
 ```
 Topic 0:
@@ -106,6 +105,23 @@ Topic 4:
   whats
   say
 ```
+
+The function "get_top_tokens" is defined to extract the most important words for each topic, along with their corresponding weights. The feature names for the vectorizer used to process the input documents are obtained using the "get_feature_names_out" method. Finally, a bar plot is generated for each topic, displaying the top tokens and their weights.
+
+IMAGES HERE
+
+Then I applied t-SNE to visualize the topic distributions of the documents in a 2D plot.
+I used the LDA model to transform the tokenized data into topic distributions for each document and a TSNE object to apply the t-SNE algorithm to the topic distributions of the documents. This is needed to reduce dimensionality for visual inspection.
+
+I created a a scatter plot of the t-SNE output using different colors for each topic. Each point on the plot represents a document, and the color of the point indicates its assigned topic. The legend on the plot shows which color corresponds to each topic.
+
+IMAGE HERE
+
+Documents that are closer together on the plot are more similar in terms of their topic distributions, while documents that are farther apart are less similar. 
+
+I created a similar plot with binary labels in the y array, which indicate whether a joke is humorous or not representing their similarity based on their TF-IDF representations.
+
+IMAGE HERE
 
 ## Universal Sentence Encoder
 
