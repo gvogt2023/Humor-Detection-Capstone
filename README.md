@@ -89,9 +89,10 @@ For topic modeling with LDA, lemmatization, tokenization and vectorization are u
 ```
 feature_names = vectorizer.get_feature_names_out()
 
-for i in range(num_topics):
-    topic_words = ' '.join([feature_names[idx] for idx in np.argsort(lda_model.components_[i])[:-11:-1]])
-    print(f"Topic {i}:\n{topic_words}\n")
+# Print the top 10 words for each topic
+for i, words in enumerate(top_words):
+    print(f"Topic {i}:")
+    print(", ".join(words))
 
 ```
 ```
