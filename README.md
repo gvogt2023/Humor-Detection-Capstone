@@ -154,18 +154,18 @@ Accuracy is the metric of greatest importance to our analysis and selection of a
 
 | Model | Training Accuracy | Test Accuracy |
 |-------|------------------|---------------|
-| Model 1 | 0.92921875 | 0.9108 |
-| Model 2 | 0.92335625 | 0.905625 |
-| Model 3 | 0.94555 | 0.9144 |
-| Model 4 | 0.897475 | 0.85495 |
-| Model 5 | 1.0 | 0.824 |
-| Model 6 | 0.789875 | 0.7675 |
-| Model 7 | 0.9999374747276306 | 0.8657500147819519 |
-| Model 8 | 0.8952500224113464 | 0.843999981880188 |
-| Model 9 | 0.999875009059906 | 0.862500011920929 |
-| Model 10 | 0.9991250038146973 | 0.8542500138282776 |
-| Model 11 | 0.9983749985694885 | 0.8497499823570251 |
-| Model 12 | 0.947 | 0.8835 |
+| Simple logistic regression model using TFIDF vectorization | 0.929 | 0.910 |
+| Logistic regression with lemmatization | 0.923 | 0.905 |
+| Support Vector Machines (SVM) model | 0.946 | 0.914 |
+| Random Forest with gridsearch | 0.897 | 0.855 |
+| K Nearest Neighbors with gridsearch | 1.000 | 0.824 |
+| XGBoost classification model | 0.790 | 0.767 |
+| Basic neural network | 1.000 | 0.866 |
+| Neural network with regularization | 0.895 | 0.844 |
+| Neural network with dropout | 0.999 | 0.863 |
+| Convolutional Neural Network (CNN) | 0.999 | 0.854 |
+| Recurrent Neural Network (RNN) | 0.998 | 0.850 |
+| Naive Bayes | 0.947 | 0.884 |
 
 Lemmatization was used in model 2 to test if lemmatization will help accuracy but it was determined to decrease accuracy. Part-of-speech tagging was then tested in model 3 and did ___. 
 
