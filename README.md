@@ -89,10 +89,9 @@ For topic modeling with LDA, lemmatization, tokenization and vectorization are u
 ```
 feature_names = vectorizer.get_feature_names_out()
 
-# Print the top 10 words for each topic
-for i, words in enumerate(top_words):
-    print(f"Topic {i}:")
-    print(", ".join(words))
+for i in range(num_topics):
+    topic_words = ' '.join([feature_names[idx] for idx in np.argsort(lda_model.components_[i])[:-11:-1]])
+    print(f"Topic {i}:\n{topic_words}\n")
 
 ```
 ```
@@ -171,13 +170,19 @@ Lemmatization was used in model 2 to test if lemmatization will help accuracy bu
 
 ## Evaluation
 
-In this project, we aimed to develop a model to classify whether a given joke is humorous or not. We used a dataset of 20,000 jokes for training and testing various machine learning models.
+In this project, we aimed to develop a model to classify whether a given text is humorous or not. We used a dataset of 20,000 jokes for training and testing various machine learning models.
 
 We started with a simple logistic regression model using TFIDF vectorization, which achieved a training accuracy of 0.92921875 and a test accuracy of 0.9108. We then tried lemmatization with logistic regression, which achieved a training accuracy of 0.92335625 and a test accuracy of 0.905625.
 
 We also experimented with Support Vector Machines (SVM), which achieved a training accuracy of 0.94555 and a test accuracy of 0.9144. Random Forest with grid search, K nearest neighbors with grid search, XGBoost classification model, basic neural network, neural network with regularization, neural network with dropout, CNN, and RNN models were also evaluated.
 
-SVM model was the best performing model with a test accuracy of 0.9144. Overall, the results demonstrate that machine learning models can be effective at classifying jokes as humorous or not. Future work could involve using larger datasets or exploring more complex models, such as deep learning models, to achieve even better performance.
+SVM model was the best performing model with a test accuracy of 0.9144. 
+
+CLASSIFICATION REPORT
+ROC CURVE
+CONFUSION MATRIX
+
+Overall, the results demonstrate that machine learning models can be effective at classifying texts as humorous or not. Future work could involve using larger datasets or exploring more complex models, such as deep learning models, to achieve even better performance.
 
 
 ## Conclusion and Recommendations
