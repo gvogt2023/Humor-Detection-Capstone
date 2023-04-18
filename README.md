@@ -45,7 +45,7 @@ for i in range(num_topics):
         print("  %s" % word)
     print()
 ```
-
+```
 Topic 0:
   joke
   mexican
@@ -105,6 +105,7 @@ Topic 4:
   time
   whats
   say
+```
 
 ## Universal Sentence Encoder
 
