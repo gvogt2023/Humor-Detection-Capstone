@@ -3,7 +3,7 @@ Humor-Detection-Capstone for Flatiron School
 
 
 
-## Business and Data Understanding:
+## Business Understanding:
 
 Stakeholders:
 - The stakeholders of the humor detection project may include social media platforms, advertisers, or content creators who want to gauge the effectiveness of their content in eliciting humor.
@@ -16,7 +16,7 @@ Business Objectives:
 - The model should be trained on a large dataset of labeled humorous and non-humorous content.
 - The resulting model can then be used to classify new content as either humorous or non-humorous, allowing stakeholders to measure the effectiveness of their content in eliciting humor.
 
-## Data understanding:
+## Data understanding
 - In a [2004 paper](https://arxiv.org/abs/2004.12765), the authors Issa Annamoradnejad, Gohar Zoghi provided on a dataset for humor detection consisting of 200,000 formal short texts. Each entry has two columns: one for the raw text of the joke and the other for target binary variable 'humor' labled true or false.
 - Example: "What is a pokemon master's favorite kind of pasta? wartortellini!!" is 'true' for 'humor'
 - The non-humorous texts are short headlines from online news sources
@@ -29,27 +29,12 @@ High negative correlations:
 - Education
 - PhysActivity
 
-Highest positive correlations:
-- GenHlth
-- HighBP
-- DiffWalk
-- BMI
 
-![Target Distribution](imgs/diabetes_target_distribution.png)
+## Topic modeling
 
-Yes, there is a class imbalance. Class 0 has a significantly larger number of samples compared to classes 1 and 2. We will undersample the major and also utilize SMOTE later.
+LDA is used as a topic modeling technique to discover latent topics in a collection of documents. It models each topic as a probability distribution over the words in the vocabulary to explain the topic-word distributions that best explain the observed document-word occurrences.
 
-![Histogram All](imgs/histogram_all_features.png) 
-
-![BMI Distribution](imgs/BMI_distribution.png)
-
-BMI is skewed to the for diabetic patients.
-
-![Age Distribution](imgs/age_distribution.png) 
-
-Age is also skewed to the for diabetic patients.
-
-Due to the size of the dataset and time for processing, we are undersampling the majority class 0 and keeping all rows for the minority class. Randomly selecting the matching length of minority class from majority dataframe.
+For topic modeling with LDA, lemmatization, tokenization and vectorization are used to prepare the text data for input into the model. 
 
 ## Universal Sentence Encoder
 
