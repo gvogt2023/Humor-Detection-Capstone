@@ -173,27 +173,8 @@ We started with a simple logistic regression model using TFIDF vectorization, wh
 
 We also experimented with Support Vector Machines (SVM), which achieved a training accuracy of 0.94555 and a test accuracy of 0.9144. Random Forest with grid search, K nearest neighbors with grid search, XGBoost classification model, basic neural network, neural network with regularization, neural network with dropout, CNN, and RNN models were also evaluated.
 
-Naive Bayes achieved the best test accuracy of 0.8835 among all the models we tested. The training accuracy was 0.947, indicating that the model may be slightly overfitting on the training data. The SVM model was the second-best performing model with a test accuracy of 0.9144.
+SVM model was the best performing model with a test accuracy of 0.9144. Overall, the results demonstrate that machine learning models can be effective at classifying jokes as humorous or not. Future work could involve using larger datasets or exploring more complex models, such as deep learning models, to achieve even better performance.
 
-Overall, the results demonstrate that machine learning models can be effective at classifying jokes as humorous or not. Future work could involve using larger datasets or exploring more complex models, such as deep learning models, to achieve even better performance.
-
-![Feature Importances](imgs/feature_importances_final_model.png) age_distribution.png
-
-BMI, age and general health are the most important features of our multiclass model. 
-
-Binary results:
-
-![Binary Results](imgs/binary_final_results.png) 
-
-All of these models seem to have similar performance with an overall accuracy of around 75%. This is a strong improvement over the multiclass models from the first notebook. The precision and recall scores for the two classes (0 and 1) are also relatively similar across the models. However, there are slight variations in the macro and weighted F1 scores.
-
-The logistic regression model with and without selectKBest feature selection has the lowest accuracy and F1 scores. This could indicate that the model is underfitting the data and may not be capturing the complexity of the relationships between the features and the target variable. The other models, including RandomForest, Bagging, KNN, XGBoost, AdaBoost, and Stacking models seem to be performing similarly well, with only slight variations in their precision, recall, and F1 scores.
-
-I will select AdaBoost as our final model in proposal.
-
-![Binary Feature Importance](imgs/feature_importances_binary.png) 
-
-BMI, age, and general health remain the most important factors in this classification model. 
 
 ## Conclusion and Recommendations
 
