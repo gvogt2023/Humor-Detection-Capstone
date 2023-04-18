@@ -162,10 +162,6 @@ Top 5 jokes:
 5. What do you call a magician in a dr. seuss book? who-dini
 ```
 
-## Topic Modeling
-
-
-
 
 ## Classification Modeling
 
