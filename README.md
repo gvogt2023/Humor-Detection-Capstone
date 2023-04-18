@@ -119,13 +119,15 @@ I used the LDA model to transform the tokenized data into topic distributions fo
 
 I created a a scatter plot of the t-SNE output using different colors for each topic. Each point on the plot represents a document, and the color of the point indicates its assigned topic. The legend on the plot shows which color corresponds to each topic.
 
-IMAGE HERE
+![t-SNE Visualization by Topic](imgs/tsne_plot_topics.png)
 
 Documents that are closer together on the plot are more similar in terms of their topic distributions, while documents that are farther apart are less similar. 
 
 I created a similar plot with binary labels in the y array, which indicate whether a joke is humorous or not representing their similarity based on their TF-IDF representations.
 
 ![t-SNE Visualization by Humor Type](imgs/tsne_visualization.png)
+
+
 
 #
 
