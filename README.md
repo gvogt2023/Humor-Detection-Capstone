@@ -30,12 +30,15 @@ The dataset is balanced in regards to its target variable 'humor.'
 
 ![Target Distribution](imgs/target_distribution.png)
 
-The length of the values in 'text' column follow a normal distribution and range from 
+Following removal of stopwords and punctuatino, the length of the values in 'text' column follow a normal distribution and have a mean of 47.84 characters with a minimum of 4 and maximum of 95 characters.
 
 ![Joke Length Distribution](imgs/jokes_length_distribution.png)
 
+The distribution is similar for jokes vs. non-jokes.
+
 ![Joke Length Distribution by Type](imgs/jokelength_distribution_type.png)
 
+A word cloud was generated to visualize the most common words in a dataset of jokes and non-jokes.
 
 ![Wordcloud Jokes](imgs/wordcloud_jokes.png)
 ![Wordcloud Non-Jokes](imgs/wouldcloud_nonjokes.png)
