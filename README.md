@@ -53,13 +53,41 @@ Due to the size of the dataset and time for processing, we are undersampling the
 
 ## Universal Sentence Encoder
 
+Given a user's input, encode it into a vector representation using the same Universal Sentence Encoder model.
+
+```
+user_input = input("Enter a sentence: ")
+
+```
+Get the number of jokes to recommend from the user
+
+```
+num_jokes = int(input("How many jokes would you like to see? "))
 ```
 
+Print the top-n jokes
+
+```
+print(f"Top {num_jokes} jokes:")
+for i, joke in enumerate(top_jokes):
+    print(f"{i+1}. {joke.text}")
+```
+
+I enter the phrase "Dr. Seuss cat in the hat" and enter "5" for number of results to show.
+
+```
+Top 5 jokes:
+1. What did dr. seuss call the book he wrote about star wars? the cat in the at-at
+2. What was schrodinger's favorite childhood book? the cat in the box by dr. seuss
+3. What is dr. seuss' favorite play? green eggs and hamlet
+4. Did you read dr seuss as a kid because green eggs and damn
+5. What do you call a magician in a dr. seuss book? who-dini
+```
 
 ## Topic Modeling
 
-Given a user's input, encode it into a vector representation using the same Universal Sentence Encoder model.
-user_input = input("Enter a sentence: ")
+
+
 
 ## Classification Modeling
 
