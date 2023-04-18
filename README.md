@@ -38,6 +38,12 @@ For topic modeling with LDA, lemmatization, tokenization and vectorization are u
 
 ## Universal Sentence Encoder
 
+I used a pre-trained Universal Sentence Encoder model from TensorFlow Hub. The encoded vectors are stored in a list called joke_vectors_list. To encode the jokes in batches, a for loop is used that iterates over the jokes in steps of the batches required due to the size of the dataset. The model object is called on each batch of jokes, and the resulting encoded vectors are appended to the joke_vectors_list list.
+
+Next, cosine similarity is calculated between all pairs of joke vectors using the cosine_similarity function from sklearn.metrics.pairwise. Since the joke vectors array may be too large to calculate cosine similarity between all pairs of vectors at once, the calculation is done in batches. The final similarity_matrix contains cosine similarity values for all pairs of joke vectors.
+
+A user will be prompted to enter a string to encode and assess cosine similarity to the list of jokes and return the most similar rows.
+
 Given a user's input, encode it into a vector representation using the same Universal Sentence Encoder model.
 
 ```
