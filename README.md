@@ -181,37 +181,81 @@ I created a similar plot with binary labels in the y array, which indicate wheth
 
 ## Classification Modeling
 
-During this iteration process for the multiclass problem of predicting for 0 (non-diabetic), 1 (prediabetic) or 2 (diabetic), I processed the following models:
-- Basic logistic regression will be our basline model. We will score for macro recall because of multiclass classification and wanting to account for positive instances of our target for our minority class '1'.
-- Add a parameter grid search for logistic regression with SMOTE for minority and standard scaler to improve the model.
-- Utilize KBest features for tuned logistic regression model.
-- RandomForest classifier with randomsearch, standard scaler and SMOTE in pipeline.
-- Utilize a bagging model with DecisionTree as my base estimator and grid search for optimal params.
-- Utilize KNN model with SelectKBest features and grid search.
-- Utilize AdaBoostClassifier with standard scaler and gridsearch
-- Utilize GradientBoost classifier with SMOTE, standard scaler for numeric columns and gridsearch.
-- Stacking model using xgb, bagging, randomforest and adaboost pipelines. Utilize parameters that were optimized during earlier models.
+- Simple logistic regression model using TFIDF vectorization
+- Logistic regression with lemmatization to test if lemmatization will help accuracy
+- Support Vector Machines (SVM) model
+Random Forest with gridsearch
+K Nearest Neighbors with gridsearch
+XGBoost classification model
+Basic neural network
+Neural network with regularization
+Neural network with dropout
+Convolutional Neural Network (CNN)
+Recurrent Neural Network (RNN)
+Naive Bayes
 
-Then when I shifted to the binary class problem of predicting for 0 (non-diabetic) or 1 (prediabetic or diabetic), I processed the same iterations of models:
-- Basic logistic regression will be our basline model. 
-- Add a parameter grid search for logistic regression with SMOTE for minority and standard scaler to improve the model.
-- Utilize KBest features for tuned logistic regression model.
-- RandomForest classifier with randomsearch and standard scaler in pipeline.
-- Utilize a bagging model with DecisionTree as my base estimator and grid search for optimal params.
-- Utilize KNN model with SelectKBest features and grid search.
-- Utilize AdaBoostClassifier with standard scaler and gridsearch
-- Utilize GradientBoost classifier with standard scaler for numeric columns and gridsearch.
-- Stacking model using xgb, bagging, randomforest and adaboost pipelines. Utilize parameters that were optimized during earlier models.
+## Results
+
+1. Model #1: Simple logistic regression model using TFIDF vectorization.
+Training Accuracy: 0.92921875
+Test Accuracy: 0.9108
+
+2. Model #2: Logistic regression with lemmatization to test if lemmatization will help accuracy.
+Training Accuracy: 0.92335625
+Test Accuracy: 0.905625
+
+3. Model #3: Support Vector Machines (SVM) model.
+Train Accuracy: 0.94555
+Test Accuracy: 0.9144
+
+4. Model #4: RandomForest with gridsearch
+Training Accuracy: 0.897475
+Test Accuracy: 0.85495
+
+5. Model #5: K nearest neighbors with gridsearch
+Training Accuracy: 1.0
+Test Accuracy: 0.824
+
+6. Model #6: XGBoost classification model
+Training Accuracy: 0.789875
+Test Accuracy: 0.7675
+
+7. Model #7: Basic neural network 
+Train Accuracy: 0.9999374747276306
+Test Accuracy: 0.8657500147819519
+
+8. Model #8: Neural network with regularization
+Train Accuracy: 0.8952500224113464
+Test Accuracy: 0.843999981880188
+
+9. Model #9: Neural network with dropout
+Train Accuracy: 0.999875009059906
+Test Accuracy: 0.862500011920929
+
+10. Model #10: CNN 
+Train Accuracy: 0.9991250038146973
+Test Accuracy: 0.8542500138282776
+
+11. Model #11: RNN
+Train Accuracy: 0.9983749985694885
+Test Accuracy: 0.8497499823570251
+
+12. Model #12: Naive Bayes
+Train Accuracy: 0.947
+Test Accuracy: 0.8835
+
 
 ## Evaluation
 
-Multiclass results:
+In this project, we aimed to develop a model to classify whether a given joke is humorous or not. We used a dataset of 20,000 jokes for training and testing various machine learning models.
 
-![Multiclass Results](imgs/multiclass_results.png)
+We started with a simple logistic regression model using TFIDF vectorization, which achieved a training accuracy of 0.92921875 and a test accuracy of 0.9108. We then tried lemmatization with logistic regression, which achieved a training accuracy of 0.92335625 and a test accuracy of 0.905625.
 
-Based on the classification reports, it appears that the basic logistic regression, bagging, and knn models all performed similarly with an accuracy score of around 70%. However, these models fail to predict for the minority class '1' at all while tuned logistic regression, logistic kbest, random forest, and gradient boost models all had lower accuracy scores but did successfully predict for value '1' of target.
+We also experimented with Support Vector Machines (SVM), which achieved a training accuracy of 0.94555 and a test accuracy of 0.9144. Random Forest with grid search, K nearest neighbors with grid search, XGBoost classification model, basic neural network, neural network with regularization, neural network with dropout, CNN, and RNN models were also evaluated.
 
-Overall, it seems that these techniques were not very successful in the multiclass approach. Bagging and knn models may be the best choices for this particular dataset due to highest accuracy scores and precision and recall scores above 0.7 for all three classes, however, it's worth noting the next notebook for Binary approach improves on this multiclass approach.
+Naive Bayes achieved the best test accuracy of 0.8835 among all the models we tested. The training accuracy was 0.947, indicating that the model may be slightly overfitting on the training data. The SVM model was the second-best performing model with a test accuracy of 0.9144.
+
+Overall, the results demonstrate that machine learning models can be effective at classifying jokes as humorous or not. Future work could involve using larger datasets or exploring more complex models, such as deep learning models, to achieve even better performance.
 
 ![Feature Importances](imgs/feature_importances_final_model.png) age_distribution.png
 
