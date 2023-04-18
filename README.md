@@ -109,11 +109,11 @@ new, photos, york, years, video, week, year, fashion, best, 10
 
 The function "get_top_tokens" is defined to extract the most important words for each topic, along with their corresponding weights, for the 5 defined topics. The feature names for the vectorizer used to process the input documents are obtained using the "get_feature_names_out" method. Finally, a bar plot is generated for each topic, displaying the top tokens and their weights.
 
-![Topic 1 Weights](imgs/topic_1_token_weights.png)
-![Topic 2 Weights](imgs/topic_2_token_weights.png)
-![Topic 3 Weights](imgs/topic_3_token_weights.png)
-![Topic 4 Weights](imgs/topic_4_token_weights.png)
-![Topic 5 Weights](imgs/topic_5_token_weights.png)
+![Topic 0 Weights](imgs/topic_weights_0.png)
+![Topic 1 Weights](imgs/topic_weights_1.png)
+![Topic 2 Weights](imgs/topic_weights_2.png)
+![Topic 3 Weights](imgs/topic_weights_3.png)
+![Topic 4 Weights](imgs/topic_weights_4.png)
 
 Then I applied t-SNE to visualize the topic distributions of the documents in a 2D plot.
 I used the LDA model to transform the tokenized data into topic distributions for each document and a TSNE object to apply the t-SNE algorithm to the topic distributions of the documents. This is needed to reduce dimensionality for visual inspection.
