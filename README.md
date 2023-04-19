@@ -136,17 +136,18 @@ I created a similar plot with binary labels in the y array, which indicate wheth
 For this binary classification problem of selecting whether humor = 'true' or 'false' based on the clean text data, I analyzed 12 different models.
 
 1. Simple logistic regression model using TFIDF vectorization
-2. Logistic regression with lemmatization to test if lemmatization will help accuracy
-3. Support Vector Machines (SVM) model
-4. Random Forest with gridsearch
-5. K Nearest Neighbors with gridsearch
-6. XGBoost classification model
-7. Basic neural network
-8. Neural network with regularization
-9. Neural network with dropout
-10. Convolutional Neural Network (CNN)
-11. Recurrent Neural Network (RNN)
-12. Naive Bayes
+2. Logistic regression with lemmatization 
+3. Logistic regression with part-of-speech tagging
+4. Support Vector Machines (SVM) model
+5. Random Forest with gridsearch
+6. K Nearest Neighbors with gridsearch
+7. XGBoost classification model
+8. Basic neural network
+9. Neural network with regularization
+10. Neural network with dropout
+11. Convolutional Neural Network (CNN)
+12. Recurrent Neural Network (RNN)
+13. Naive Bayes
 
 ## Results
 
@@ -156,6 +157,7 @@ Accuracy is the metric of greatest importance to our analysis and selection of a
 |-------|------------------|---------------|
 | Simple logistic regression model using TFIDF vectorization | 0.929 | 0.910 |
 | Logistic regression with lemmatization | 0.923 | 0.905 |
+| Logistic regression with part-of-speech tagging | | |
 | Support Vector Machines (SVM) model | 0.946 | 0.914 |
 | Random Forest with gridsearch | 0.897 | 0.855 |
 | K Nearest Neighbors with gridsearch | 1.000 | 0.824 |
@@ -167,7 +169,7 @@ Accuracy is the metric of greatest importance to our analysis and selection of a
 | Recurrent Neural Network (RNN) | 0.998 | 0.850 |
 | Naive Bayes | 0.947 | 0.884 |
 
-Lemmatization was used in model 2 to test if lemmatization will help accuracy but it was determined to decrease accuracy. Part-of-speech tagging was then tested in model 3 and did ___. 
+Lemmatization was used in model 2 to test if lemmatization will help accuracy but it was determined to decrease accuracy. Part-of-speech tagging was then tested in model 3 and did not increase accuracy. For the following model iterations, we refrained from lemmatization and part-of-speech tagging.
 
 ## Evaluation
 
