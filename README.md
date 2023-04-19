@@ -82,9 +82,9 @@ Top 5 jokes:
 
 ## Topic modeling
 
-LDA is used as a topic modeling technique to discover latent topics in a collection of documents. It models each topic as a probability distribution over the words in the vocabulary to explain the topic-word distributions.
+LDA and NMF are two tools used as a topic modeling technique to discover latent topics in a collection of documents. They model each topic as a probability distribution over the words in the vocabulary to explain the topic-word distributions.
 
-For topic modeling with LDA, lemmatization, tokenization and vectorization are used to prepare the text data for input into the model. TfidfVectorizer is used to tokenize the lemmatized text data, and an LDA model is created and trained on the tokenized data. I analyze the topic structure of the jokes in the dataset and print the top words for each topic using get feature names.
+For topic modeling with LDA and NMF, lemmatization, tokenization and vectorization are used to prepare the text data for input into the model. TfidfVectorizer is used to tokenize the lemmatized text data, and an LDA model is created and trained on the tokenized data. I analyze the topic structure of the jokes in the dataset and print the top words for each topic using get feature names. NMF provided the strongest results and clearest topic distributions so this is the topic modeling technique I chose. 
 
 ```
 # Print the top 10 words for each topic
