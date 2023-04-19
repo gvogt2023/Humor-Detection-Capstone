@@ -179,7 +179,15 @@ We also experimented with Support Vector Machines (SVM), which achieved a traini
 
 SVM model was the best performing model with a test accuracy of 0.9144. 
 
-CLASSIFICATION REPORT
+Classification report:
+
+| precision | recall | f1-score | support |
+|-----------|--------|----------|---------|
+|    0.92   |  0.91  |   0.91   |  20001  |
+|    0.91   |  0.92  |   0.91   |  19999  |
+|-----------|--------|----------|---------|
+|    0.91   |  0.91  |   0.91   |  40000  |
+
 
 Confusion matrix for final SVM model:
 
