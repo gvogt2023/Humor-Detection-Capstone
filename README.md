@@ -202,6 +202,8 @@ Overall, the results demonstrate that machine learning models can be effective a
 
 ## Conclusion and Recommendations
 
-Based on the results of the classification modeling, we can conclude that the SVM model performed the best with a test accuracy of 0.9144, closely followed by the simple logistic regression model using TFIDF vectorization with a test accuracy of 0.9108. It is worth noting that some models performed significantly worse, such as the XGBoost classification model and the K Nearest Neighbors model, which suggests that these models may not be suitable for this particular problem.
+After evaluating several classification models on the joke dataset, we can conclude that the SVM model had the highest test accuracy of 0.9144, closely followed by the simple logistic regression model using TFIDF vectorization with a test accuracy of 0.9108. However, some models like XGBoost classification and K Nearest Neighbors did not perform well, indicating that they may not be suitable for this problem.
 
-In terms of recommendations, we suggest using the SVM model or the simple logistic regression model with TFIDF vectorization for this task, as they both demonstrated high accuracy in predicting the classification of jokes. Additionally, it may be worth exploring other natural language processing techniques, such as stemming or part-of-speech tagging, to see if they can further improve the accuracy of the models. Finally, it may be beneficial to collect more data and expand the dataset to improve the models' generalizability.
+Based on these results, we recommend using the SVM or logistic regression model with TFIDF vectorization for joke classification. Additionally, exploring other natural language processing techniques like stemming or part-of-speech tagging may improve model accuracy further. Collecting more data and expanding the dataset can also help improve the models' generalizability.
+
+Finally, we recommend exploring topic modeling to cohort users and understand their preferences better. This approach can help tailor the joke recommendations and improve user engagement.
