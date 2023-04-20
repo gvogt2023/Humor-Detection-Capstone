@@ -174,20 +174,18 @@ Accuracy is the metric of greatest importance to our analysis and selection of a
 
 In this project, we aimed to develop a model to classify whether a given text is humorous or not. We used a dataset of 20,000 jokes for training and testing various machine learning models.
 
-We started with a simple logistic regression model using TFIDF vectorization, which achieved a training accuracy of 0.92921875 and a test accuracy of 0.9108. We then tried lemmatization with logistic regression, which achieved a training accuracy of 0.92335625 and a test accuracy of 0.905625.
+We started with a simple logistic regression model using TFIDF vectorization, which achieved a test accuracy of 0.926. We also experimented with Support Vector Machines (SVM), which achieved a training accuracy of 0.94555 and a test accuracy of 0.9144. Random Forest with grid search, K nearest neighbors with grid search, XGBoost classification model, basic neural network, neural network with regularization, neural network with dropout, CNN, and RNN models were also evaluated.
 
-We also experimented with Support Vector Machines (SVM), which achieved a training accuracy of 0.94555 and a test accuracy of 0.9144. Random Forest with grid search, K nearest neighbors with grid search, XGBoost classification model, basic neural network, neural network with regularization, neural network with dropout, CNN, and RNN models were also evaluated.
-
-SVM model was the best performing model with a test accuracy of 0.9144. 
+SVM model was the best performing model with a test accuracy of 0.93. 
 
 Classification report:
 
 | precision | recall | f1-score | support |
 |-----------|--------|----------|---------|
-|    0.92   |  0.91  |   0.91   |  20001  |
-|    0.91   |  0.92  |   0.91   |  19999  |
+|    0.93   |  0.93  |   0.93   |  20001  |
+|    0.93   |  0.93  |   0.93   |  19999  |
 |-----------|--------|----------|---------|
-|    0.91   |  0.91  |   0.91   |  40000  |
+|    0.93   |  0.93  |   0.93   |  40000  |
 
 
 Confusion matrix for final SVM model:
