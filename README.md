@@ -155,19 +155,19 @@ Accuracy is the metric of greatest importance to our analysis and selection of a
 
 | Model                                                  | Training Accuracy | Test Accuracy |
 |--------------------------------------------------------|------------------|---------------|
-| Simple logistic regression model using TFIDF vectorization | 0.938            | 0.926         |
-| Logistic regression with lemmatization and TFIDF vectorization | 0.935            | 0.924         |
-| Support Vector Machines (SVM) model with TFIDF vectorization | 0.943            | 0.933         |
-| Random Forest with gridsearch using TFIDF vectorization | 0.953            | 0.929         |
-| K Nearest Neighbors with gridsearch using TFIDF vectorization | 1.000            | 0.918         |
-| XGBoost classification model with TFIDF vectorization   | 0.897            | 0.855         |
-| Basic neural network with TFIDF vectorization           | 1.000            | 0.883         |
-| Neural network with regularization and TFIDF vectorization | 0.938            | 0.890         |
-| Neural network with dropout and TFIDF vectorization     | 0.999            | 0.908         |
-| Convolutional Neural Network (CNN) with TFIDF vectorization | 0.999            | 0.903         |
-| Recurrent Neural Network (RNN) with TFIDF vectorization | 0.997            | 0.894         |
-| Naive Bayes with TFIDF vectorization                    | 0.942            | 0.894         |
+| Simple logistic regression model                        | 0.938            | 0.926         |
+| Support Vector Machines (SVM) model                     | 0.953            | 0.929         |
+| Random Forest with gridsearch                           | 1.000            | 0.918         |
+| K Nearest Neighbors with gridsearch                     | 0.897            | 0.855         |
+| XGBoost classification model                            | 1.000            | 0.883         |
+| Basic neural network                                    | 0.938            | 0.890         |
+| Neural network with regularization                       | 0.999            | 0.908         |
+| Neural network with dropout                            | 0.999            | 0.903         |
+| Convolutional Neural Network (CNN)                      | 0.997            | 0.894         |
+| Recurrent Neural Network (RNN)                          | 0.942            | 0.894         |
+| Naive Bayes                                             | 0.946            | 0.888        |
 
+12 different classification models were tested using TF-IDF vectorization and selected highest performing train accuracy. SVM had the highest test accuracy of 0.933, followed by random forest with .929. Models like neural networks and XGBoost did not perform well for this problem. Removing punctuation and/or Lemmatization decreased model accuracy. Removing stop-words did not increase model accuracy.
 
 
 ## Evaluation
