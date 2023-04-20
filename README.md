@@ -153,23 +153,22 @@ For this binary classification problem of selecting whether humor = 'true' or 'f
 
 Accuracy is the metric of greatest importance to our analysis and selection of a final model.
 
-| Model | Training Accuracy | Test Accuracy |
-|-------|------------------|---------------|
-| Simple logistic regression model using TFIDF vectorization | 0.929 | 0.910 |
-| Logistic regression with lemmatization | 0.923 | 0.905 |
-| Logistic regression with part-of-speech tagging | | |
-| Support Vector Machines (SVM) model | 0.946 | 0.914 |
-| Random Forest with gridsearch | 0.897 | 0.855 |
-| K Nearest Neighbors with gridsearch | 1.000 | 0.824 |
-| XGBoost classification model | 0.790 | 0.767 |
-| Basic neural network | 1.000 | 0.866 |
-| Neural network with regularization | 0.895 | 0.844 |
-| Neural network with dropout | 0.999 | 0.863 |
-| Convolutional Neural Network (CNN) | 0.999 | 0.854 |
-| Recurrent Neural Network (RNN) | 0.998 | 0.850 |
-| Naive Bayes | 0.947 | 0.884 |
+| Model                                                  | Training Accuracy | Test Accuracy |
+|--------------------------------------------------------|------------------|---------------|
+| Simple logistic regression model using TFIDF vectorization | 0.938            | 0.926         |
+| Logistic regression with lemmatization and TFIDF vectorization | 0.935            | 0.924         |
+| Support Vector Machines (SVM) model with TFIDF vectorization | 0.943            | 0.933         |
+| Random Forest with gridsearch using TFIDF vectorization | 0.953            | 0.929         |
+| K Nearest Neighbors with gridsearch using TFIDF vectorization | 1.000            | 0.918         |
+| XGBoost classification model with TFIDF vectorization   | 0.897            | 0.855         |
+| Basic neural network with TFIDF vectorization           | 1.000            | 0.883         |
+| Neural network with regularization and TFIDF vectorization | 0.938            | 0.890         |
+| Neural network with dropout and TFIDF vectorization     | 0.999            | 0.908         |
+| Convolutional Neural Network (CNN) with TFIDF vectorization | 0.999            | 0.903         |
+| Recurrent Neural Network (RNN) with TFIDF vectorization | 0.997            | 0.894         |
+| Naive Bayes with TFIDF vectorization                    | 0.942            | 0.894         |
 
-Lemmatization was used in model 2 to test if lemmatization will help accuracy but it was determined to decrease accuracy. Part-of-speech tagging was then tested in model 3 and did not increase accuracy. For the following model iterations, we refrained from lemmatization and part-of-speech tagging.
+
 
 ## Evaluation
 
